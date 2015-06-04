@@ -1,0 +1,4 @@
+vendor/
+users.csv
+users-appended.csv
+GeoIP.tgz
