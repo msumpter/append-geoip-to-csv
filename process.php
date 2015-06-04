@@ -14,6 +14,7 @@ while ($row = fgetcsv($handle)) {
 		$array[] = $row;
 		continue;
 	}
+	// Assuming 8th column is the IP address
 	$record = geoip_record_by_addr($gi, $row[7]);
 	// Also available $record->city,postal_code,latitude,longitude,metro_code,area_code,continent_code
 	array_push($row, $record->country_name, $GEOIP_REGION_NAME[$record->country_code][$record->region]); 
